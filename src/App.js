@@ -4,6 +4,9 @@ import Header from './Components/Header'
 import Banner from './Components/Banner'
 import Categorycards from './Components/Categorycards'
 import Productslarge from './Components/Productslarge'
+import Offerzone from './Components/Offerzone'
+import Productsmall from './Components/Productsmall'
+import Footer from './Components/Footer'
 function App() {
   return (
     <>
@@ -14,6 +17,10 @@ function App() {
         <Categorycards/>
       
         <Productslarge/>
+        <Offerzone/>
+        <Productsmall/>
+        <Footer/>
+
     </>
   )
 }

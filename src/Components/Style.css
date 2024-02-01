@@ -1,3 +1,21 @@
+.menu-list{
+    position: absolute;
+    background-color: white;
+    right: 0;
+    top: 0;
+    width: 300px;
+    height: 790px;
+    display: none;
+}
+.menu-items ul{
+    list-style: none;
+    display: block;
+}
+.menu-items ul li{
+    padding: 30px;
+    font-family: "poppins-regular";
+}
+
 .child-one{
     font-family: "gilroy-bold";
     color: white;
@@ -58,12 +76,18 @@
     fill: white;
     opacity: 100%;
 }
+/* banner */
+
+@media (max-width:720px) {
+    .child-wrapper-content{
+        padding-left: 50px;
+    }
+    
+}
 .banner-container{
     background-color: var(--secondary-color);
     padding-bottom: 100px;
     padding-top: 100px;
-    /* margin-top: -0px; */
-    
 }
 .banner-wrapper{
     display: flex;
@@ -117,9 +141,12 @@
 }
 
 /* categories */
-
+.caregory-cards{
+    display: flex;
+    gap: 20px;
+}
 .category-card{
-    width: 188px;
+    width: 198px;
     height: 218px;
     border: 1px solid #EEEEEE;
     position: relative;
@@ -190,7 +217,7 @@
 .product-card{
     border-radius: 8px;
     width: 350px;
-    height: 374px;
+    height: 380px;
     border: 1px solid #EEEEEE;
     position: relative;
 }
@@ -199,6 +226,7 @@
     width: 290px;
     height: 271px;
     margin: 11px;
+    overflow: hidden;
     border-radius: 6px;
 }
 .product-card-image img{
@@ -208,7 +236,7 @@
 .products-category{
     position: absolute;
     background-color: #EFEFEF;
-    width:71px;
+    width:100px;
     height: 21px;
     text-align: center;
     border-radius: 4px;
@@ -230,15 +258,21 @@
 }
 .category-favorate svg{
     width: 100%;
-    fill: white;
+    fill: #2C2C2C;
 }
 .product-name{
+    height: 46px;
+    width: 290px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
     font-family: "poppins-medium";
-    font-size: 20px;
+    font-size: 18px;
     position: absolute;
-    bottom: 15px;
+    bottom: 50px;
     left: 15px;
     color: #2C2C2C;
+    line-height: 20px;
 }
 .product-price{
     display: flex;
@@ -248,8 +282,9 @@
     font-family: "poppins-regular";
     gap: 10px;
     color: #2C2C2C;
-    bottom: -10px;
+    bottom: -20px;
     left: 15px;
+    margin-bottom: 20px;
 }
 .products-cards{
     margin-top: 30px;
@@ -258,5 +293,233 @@
     display: flex;
     width: 100%;
     overflow: hidden;
+    overflow-x: scroll;
     gap: 20px;
+}
+.products-cards::-webkit-scrollbar{
+    display: none;
+}
+
+/* offerzone */
+
+.offer-header button svg{
+    width: 50px;
+    fill: #2C2C2C;
+    opacity: 70%;
+}
+.offer-header button{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.wrapper-child{
+    padding: 20px;
+    background-color: var(--secondary-color);
+    border-radius: 8px;
+    overflow: hidden;
+    position: relative;
+}
+.wrapper-child{
+    width: 50%;
+}
+.offer-wrapper-flex{
+    display: flex;
+    gap: 20px;
+}
+.offer-zone{
+    padding: 100px 100px;
+    box-sizing: border-box;
+
+}
+.offer-badge{
+    width: 100px;
+    text-align: center;
+    border-radius: 4px;
+    color: white;
+    font-size: 12px;
+    font-family: "poppins-regular";
+    
+    background-color: var(--primary-color);
+}
+.offer-header{
+    line-height: 0px;
+}
+.offer-header p{
+    font-size: 20px;
+    font-family: "poppins-medium";
+    line-height: 30px;
+}
+.offer-header span{
+    font-size: 15px;
+    font-family: "poppins-regular";
+}
+.offer-btn{
+    padding-left: 160px;
+}
+.offer-image{
+    width: 480px;
+    position: absolute;
+    right: -180px;
+    top: -20px;
+}
+.offer-image img{
+    width: 100%;
+}
+.wrapper-child{
+    display: flex;
+    justify-content: space-between;
+}
+
+/* small cards */
+
+.products-box{
+    width: 200px;
+    height: 261px;
+    border: 1px solid #EEEEEE;
+    position: relative;
+    border-radius: 6px;
+}
+.product-photo{
+    /* position: absolute; */
+    width: 190px;
+    height: 169px;
+    overflow: hidden;
+    margin: 9px;
+}
+.product-photo img{
+    width: 100%;
+    border-radius: 4px;
+}
+.pro-head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.products-categories{
+    position: absolute;
+    top: 0;
+    left: 13px;
+    
+}
+.products-categories p{
+    color: #777777;
+    width: 100px;
+    height: 20px;
+    border-radius: 4px;
+    background-color: #EFEFEF;
+    font-family: 'poppins-regular';
+    text-align: center;
+    top: 3px;
+    font-size: 11px;
+    
+}
+.products-heart{
+    position: absolute;
+    right: 15px;
+    top: 10px;
+}
+.products-title{
+    position: absolute;
+    bottom: 35px;
+    font-family: "poppins-medium";
+    left: 12px;
+}
+.products-title p{
+    width: 169px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.products-price{
+    display: flex;
+    position: absolute;
+    bottom: 0px;
+    gap: 10px;
+    font-family: 'poppins-regular';
+    left: 12px;
+}
+.products-boxs{
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+    padding-top: 30px;
+    overflow-x: scroll;
+}
+.product-controls{
+    width: 100%;
+    padding: 0px 100px;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.products-boxs::-webkit-scrollbar{
+    display: none;
+}
+
+/* footer */
+
+.footer-container{
+    background-color: #1A1A1A;
+    padding: 30px 100px;
+    box-sizing: border-box;
+    margin-top: 80px;
+}
+.footer-section-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ffffff3b;
+    padding-bottom: 40px;
+}
+.child-footer p{
+    font-size: 20px;
+    color: white;
+    font-family: 'poppins-medium';
+}
+.child-footer input{
+    width: 500px;
+    padding: 10px 20px;
+    border: 1px solid #ffffff3b ;
+    background-color: transparent;
+    outline: none;
+    color: white;
+
+}
+.child-footer-socials{
+    display: flex;
+    gap: 15px;
+    margin-top: -8px;
+}
+.footer-socials-icons svg{
+    fill: white;
+}
+.footer-nav-wrapper ul{
+    list-style: none;
+    overflow: hidden;
+    display: block;
+}
+.footer-nav-wrapper li{
+    color: white;
+    font-family: "poppins-regular";
+    padding: 15px;
+}
+
+.footer-nav{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ffffff3b;
+}
+.footer-nav-wrapper p{
+    font-size: 40px;
+    font-family: 'gilroy-bold';
+    color: white;
+}
+.footer-bottom p{
+    font-family: 'poppins-regular';
+    font-size: 12px;
+    text-align: center;
+    color: white;
+    opacity: 70%;
+}
+.footer-bottom p svg{
+    padding-right: 20px;
 }

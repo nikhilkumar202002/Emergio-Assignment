@@ -1,6 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Style.css'
 function HEADER() {
+    
+
+    const [isOpen, setIsOpen] = useState(false);
+    const toggleMenu = () => {
+        setIsOpen(!isOpen);
+    };
   return (
     <>
         <header>
@@ -10,7 +16,7 @@ function HEADER() {
                         <p>.eCom</p>
                     </div>
                     <div className='hamburger-menu'>
-                        <button><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" id="menu"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"></path></svg></button>
+                        <button onClick={toggleMenu}><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" id="menu"><path fill="none" d="M0 0h24v24H0V0z"></path><path d="M4 18h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zm0-5h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1s.45 1 1 1zM3 7c0 .55.45 1 1 1h16c.55 0 1-.45 1-1s-.45-1-1-1H4c-.55 0-1 .45-1 1z"></path></svg></button>
                     </div>
                     <div className='child-two'>
                         <ul>
@@ -33,6 +39,25 @@ function HEADER() {
                 </div>
             </section>
         </header>
+{
+    isOpen ? 
+    <div className='menu-list'>
+    <div className='menu-items'>
+        <ul>
+        <li>Home</li>
+        <li>Shop</li>
+        <li>About us</li>
+        <li>Contact us</li>
+        <li>Blog</li>
+        <li>Profile</li>
+        <li>Cart</li>
+        </ul>
+    </div>
+</div>
+:
+""
+}
+       
     </>
   )
 }
